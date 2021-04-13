@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="users-page">
+    <div class="container">
+        <h1>Alunos</h1>
+        <div class="user-box">
+            <table>
+                <thead>
+                    <th>Nome</th>
+                    <th>Cursos</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <% users.forEach((user, index) => { %>
+                        <tr>
+                            <td>
+                                <%= user.name %>
+                            </td>
+                            <td>
+                                <div class="dropdown-cursos">
+                                    <%= user.cursos.length %>
+                                    <ul>
+                                        <% for(curso of user.cursos) { %>
+                                            <li> <%=curso%> </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/users/<%= index %>"> Ver </a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

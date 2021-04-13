@@ -1,0 +1,61 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  box-shadow: 1px 1px 1px #eee;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.users-page .user-box {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.users-page .user-box table {
+  width: 100%;
+}
+
+.users-page .user-box table th,
+.users-page .user-box table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+.users-page .user-box tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.user-box .dropdown-cursos {
+  cursor: pointer;
+  position: relative;
+}
+
+.user-box .dropdown-cursos ul {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #00B7FF;
+  color: azure;
+  list-style: none;
+  position: absolute;
+  opacity: 0;
+  bottom: 100%;
+  left: -10px;
+  /* transform: translateY(-3000%); */
+  transition: all .3s ease-in-out;
+
+}
+
+.user-box .dropdown-cursos:hover ul {
+  /* transform: translateX(0%); */
+  opacity: 1;
+}

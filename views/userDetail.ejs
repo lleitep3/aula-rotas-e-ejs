@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <a href="/users">Voltar</a>
+    <div>
+        <h3>
+            <%= user.name %>
+        </h3>
+
+        <h5> Cursos: </h5>
+
+        <ul>
+            <% user.cursos.forEach(curso => { %>
+                <li>
+                    <%= curso %>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+</body>
+
+</html>
